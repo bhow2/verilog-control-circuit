@@ -1,36 +1,35 @@
-# Foobar
+# Verilog ALU Control Circuit
 
-Foobar is a Python library for dealing with word pluralization.
+This repository contains the implementation and testing of a control circuit using the Verilog hardware description language. The control circuit processes inputs by taking two 4-bit inputs and a 3-bit opcode, selecting the appropriate ALU module through a multiplexer based on the provided opcode. It includes various ALU functions like adders, multipliers, shifters, and more.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Clone the repository to your local machine. 
 
 ```bash
-pip install foobar
+git clone https://github.com/bhow2/verilog-control-circuit.git
 ```
 
 ## Usage
 
-```python
-import foobar
+1. Navigate to the project directory
 
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
+```bash
+cd verilog-control-circuit
 ```
+2. Compile and run the Verilog files using your preferred simulation tools. (Below is an example using a verilog compiler and simulator, Icarus Verilog).
 
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
+```bash
+iverilog -o alu_control src/*.v
+```
+Run the simulation
+```bash
+vvp alu_control
+```
+View the waveform
+```bash
+gtkwave waveforms/alu_control.vcd
+```
 
 ## License
 
