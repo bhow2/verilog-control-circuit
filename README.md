@@ -17,7 +17,8 @@ git clone https://github.com/bhow2/verilog-control-circuit.git
 ```bash
 cd verilog-control-circuit
 ```
-2. Compile and run the Verilog files using your preferred simulation tools. (Below is an example using a verilog compiler and simulator, Icarus Verilog).
+2. Compile and run the Verilog files using your preferred simulation tools.
+   (Below is an example using a verilog compiler and simulator, Icarus Verilog).
 
 ```bash
 iverilog -o alu_control src/*.v
